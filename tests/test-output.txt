@@ -1,0 +1,67 @@
+
+1. Data check: bad rows are skipped and reported, never a crash
+  PASS sample data loads with no problems
+  PASS a malformed container id is skipped and reported
+  PASS a population of an unknown species is skipped
+  PASS a second open assignment for the same container is refused
+  PASS a population cannot be its own parent
+  PASS a duplicate transaction id is skipped
+  PASS a missing "today" falls back and says so
+
+2. Scanning a container pulls the population
+  PASS "101" is read as C-0101 (typed or scanned)
+  PASS C-0101 holds P-26-031, yellow mealworm, mid larva, day 42
+  PASS it knows the same population is also in C-0102 and C-0103
+  PASS it shows the last service (T-0018, 1560 g)
+  PASS an empty container says so
+  PASS an unknown container is refused
+  PASS the merged population shows its two parents
+
+3. W1410 Routine Tray Service: validation and recording
+  PASS a normal service is recorded as T-0021 with status Recorded
+  PASS the record links container, population and operator
+  PASS the trace shows scan, lookup, validate, compare, record
+  PASS a second service on the same container today is refused
+  PASS servicing an empty container is refused
+  PASS out-of-range mass, water and feed and a missing operator are all refused with reasons
+  PASS blank mass is refused (not read as zero)
+  PASS too wet and too dry together is refused
+  PASS an unknown observation is refused
+  PASS a 44% mass change is saved but marked Needs review
+  PASS mold is saved but marked Needs review
+  PASS "too dry" alone is recorded normally
+  PASS notes over 500 characters are refused
+
+4. Splitting: more containers, the same population ID
+  PASS C-0104 splits into C-0110 and C-0111
+  PASS all three containers now hold P-26-034: identity kept
+  PASS no new population was created
+  PASS the split is one transaction listing every container
+  PASS splitting into an occupied container is refused
+  PASS splitting an empty container is refused
+  PASS listing a destination twice is refused
+
+5. Consolidating: same population keeps its ID, different populations make a new one
+  PASS two trays of P-26-031 consolidate without a new ID
+  PASS C-0103 is now empty and C-0102 still holds P-26-031
+  PASS P-26-031 (C-0103) and P-26-040 (C-0109) make a new population P-26-045
+  PASS its parents and shares come from the latest tray masses (35% and 65%)
+  PASS the lineage goes all the way back to P-26-027 and P-26-028
+  PASS P-26-040 is closed (none of it is left anywhere)
+  PASS P-26-031 stays active (still in C-0101 and C-0102)
+  PASS P-26-031 now lists P-26-045 as a descendant
+  PASS consolidating different stages is refused
+  PASS consolidating different species is refused
+  PASS consolidating into an occupied third container is refused
+  PASS one container alone is refused
+
+6. Lifecycle stage, history and export
+  PASS P-26-034 moves from early to mid larva, logged as a transaction
+  PASS a closed population cannot change stage
+  PASS C-0101 history: 2 services in date order
+  PASS P-26-040 history can include its parents' trays before the merge
+  PASS CSV export has a header and one line per service
+  PASS CSV quotes fields with commas
+  PASS floor view: 15 containers, 9 active, 6 empty, 8 due for service
+
+53 checks: 53 passed, 0 failed

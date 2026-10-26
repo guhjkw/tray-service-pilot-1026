@@ -1,0 +1,508 @@
+{
+  "_note": "Invented insect-rearing facility for a demo. Every container, population, operator and measurement is made up.",
+  "facility": {
+    "name": "Northfield Rearing Lab",
+    "short": "Northfield",
+    "procedure": {
+      "code": "W1410",
+      "name": "Routine Tray Service"
+    }
+  },
+  "today": "2026-10-26 09:00",
+  "operators": [
+    {
+      "id": "op1",
+      "name": "Kim Nguyen"
+    },
+    {
+      "id": "op2",
+      "name": "Jordan Alvarez"
+    },
+    {
+      "id": "op3",
+      "name": "Riley Brooks"
+    }
+  ],
+  "species": [
+    {
+      "id": "TM",
+      "name": "Yellow mealworm",
+      "latin": "Tenebrio molitor",
+      "stages": [
+        "Egg",
+        "Early larva",
+        "Mid larva",
+        "Late larva",
+        "Pupa",
+        "Adult"
+      ]
+    },
+    {
+      "id": "HI",
+      "name": "Black soldier fly",
+      "latin": "Hermetia illucens",
+      "stages": [
+        "Egg",
+        "Early larva",
+        "Late larva",
+        "Prepupa",
+        "Pupa",
+        "Adult"
+      ]
+    }
+  ],
+  "rules": {
+    "massMin": 200,
+    "massMax": 6000,
+    "waterMax": 400,
+    "feedMax": 800,
+    "massChangeReview": 25,
+    "notesMax": 500,
+    "observations": [
+      "Mortality above normal",
+      "Mold",
+      "Mites",
+      "Odor",
+      "Too wet",
+      "Too dry",
+      "Escapes"
+    ],
+    "reviewObservations": [
+      "Mold",
+      "Mites",
+      "Mortality above normal"
+    ]
+  },
+  "containers": [
+    {
+      "id": "C-0101",
+      "rack": "A",
+      "shelf": 1
+    },
+    {
+      "id": "C-0102",
+      "rack": "A",
+      "shelf": 1
+    },
+    {
+      "id": "C-0103",
+      "rack": "A",
+      "shelf": 2
+    },
+    {
+      "id": "C-0104",
+      "rack": "A",
+      "shelf": 2
+    },
+    {
+      "id": "C-0105",
+      "rack": "A",
+      "shelf": 3
+    },
+    {
+      "id": "C-0106",
+      "rack": "A",
+      "shelf": 3
+    },
+    {
+      "id": "C-0107",
+      "rack": "B",
+      "shelf": 1
+    },
+    {
+      "id": "C-0108",
+      "rack": "B",
+      "shelf": 1
+    },
+    {
+      "id": "C-0109",
+      "rack": "B",
+      "shelf": 2
+    },
+    {
+      "id": "C-0110",
+      "rack": "B",
+      "shelf": 2
+    },
+    {
+      "id": "C-0111",
+      "rack": "B",
+      "shelf": 3
+    },
+    {
+      "id": "C-0112",
+      "rack": "B",
+      "shelf": 3
+    },
+    {
+      "id": "C-0201",
+      "rack": "C",
+      "shelf": 1
+    },
+    {
+      "id": "C-0202",
+      "rack": "C",
+      "shelf": 1
+    },
+    {
+      "id": "C-0203",
+      "rack": "C",
+      "shelf": 2
+    }
+  ],
+  "populations": [
+    {
+      "id": "P-26-027",
+      "species": "TM",
+      "stage": "Mid larva",
+      "origin": "Hatched",
+      "created": "2026-09-08",
+      "status": "Closed"
+    },
+    {
+      "id": "P-26-028",
+      "species": "TM",
+      "stage": "Mid larva",
+      "origin": "Hatched",
+      "created": "2026-09-09",
+      "status": "Closed"
+    },
+    {
+      "id": "P-26-029",
+      "species": "TM",
+      "stage": "Late larva",
+      "origin": "Hatched",
+      "created": "2026-09-01",
+      "status": "Active"
+    },
+    {
+      "id": "P-26-031",
+      "species": "TM",
+      "stage": "Mid larva",
+      "origin": "Hatched",
+      "created": "2026-09-14",
+      "status": "Active"
+    },
+    {
+      "id": "P-26-034",
+      "species": "TM",
+      "stage": "Early larva",
+      "origin": "Hatched",
+      "created": "2026-09-20",
+      "status": "Active"
+    },
+    {
+      "id": "P-26-040",
+      "species": "TM",
+      "stage": "Mid larva",
+      "origin": "Merged",
+      "created": "2026-10-12",
+      "status": "Active"
+    },
+    {
+      "id": "P-26-044",
+      "species": "HI",
+      "stage": "Late larva",
+      "origin": "Hatched",
+      "created": "2026-10-10",
+      "status": "Active"
+    }
+  ],
+  "lineage": [
+    {
+      "child": "P-26-040",
+      "parent": "P-26-027",
+      "share": 0.55,
+      "event": "T-0008"
+    },
+    {
+      "child": "P-26-040",
+      "parent": "P-26-028",
+      "share": 0.45,
+      "event": "T-0008"
+    }
+  ],
+  "assignments": [
+    {
+      "container": "C-0107",
+      "population": "P-26-027",
+      "from": "2026-09-08",
+      "to": "2026-10-12"
+    },
+    {
+      "container": "C-0108",
+      "population": "P-26-028",
+      "from": "2026-09-09",
+      "to": "2026-10-12"
+    },
+    {
+      "container": "C-0105",
+      "population": "P-26-029",
+      "from": "2026-09-01",
+      "to": null
+    },
+    {
+      "container": "C-0106",
+      "population": "P-26-029",
+      "from": "2026-09-29",
+      "to": null
+    },
+    {
+      "container": "C-0101",
+      "population": "P-26-031",
+      "from": "2026-09-14",
+      "to": null
+    },
+    {
+      "container": "C-0102",
+      "population": "P-26-031",
+      "from": "2026-10-05",
+      "to": null
+    },
+    {
+      "container": "C-0103",
+      "population": "P-26-031",
+      "from": "2026-10-05",
+      "to": null
+    },
+    {
+      "container": "C-0104",
+      "population": "P-26-034",
+      "from": "2026-09-20",
+      "to": null
+    },
+    {
+      "container": "C-0109",
+      "population": "P-26-040",
+      "from": "2026-10-12",
+      "to": null
+    },
+    {
+      "container": "C-0201",
+      "population": "P-26-044",
+      "from": "2026-10-10",
+      "to": null
+    },
+    {
+      "container": "C-0202",
+      "population": "P-26-044",
+      "from": "2026-10-19",
+      "to": null
+    }
+  ],
+  "transactions": [
+    {
+      "id": "T-0003",
+      "type": "W1410",
+      "at": "2026-10-05 08:30",
+      "operator": "op3",
+      "container": "C-0107",
+      "population": "P-26-027",
+      "mass": 1310,
+      "water": 100,
+      "feed": 180,
+      "obs": [],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0004",
+      "type": "W1410",
+      "at": "2026-10-05 08:45",
+      "operator": "op3",
+      "container": "C-0108",
+      "population": "P-26-028",
+      "mass": 1090,
+      "water": 100,
+      "feed": 160,
+      "obs": [
+        "Too dry"
+      ],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0005",
+      "type": "Split",
+      "at": "2026-09-29 10:15",
+      "operator": "op2",
+      "population": "P-26-029",
+      "containers": [
+        "C-0105",
+        "C-0106"
+      ],
+      "note": "Split C-0105 into C-0105 and C-0106 (same population)"
+    },
+    {
+      "id": "T-0006",
+      "type": "Split",
+      "at": "2026-10-05 09:30",
+      "operator": "op1",
+      "population": "P-26-031",
+      "containers": [
+        "C-0101",
+        "C-0102",
+        "C-0103"
+      ],
+      "note": "Split C-0101 into C-0101, C-0102 and C-0103 (same population)"
+    },
+    {
+      "id": "T-0008",
+      "type": "Merge",
+      "at": "2026-10-12 11:00",
+      "operator": "op3",
+      "population": "P-26-040",
+      "containers": [
+        "C-0107",
+        "C-0108",
+        "C-0109"
+      ],
+      "note": "Consolidated P-26-027 (C-0107) and P-26-028 (C-0108) into new population P-26-040 in C-0109"
+    },
+    {
+      "id": "T-0010",
+      "type": "W1410",
+      "at": "2026-10-19 08:40",
+      "operator": "op1",
+      "container": "C-0101",
+      "population": "P-26-031",
+      "mass": 1480,
+      "water": 120,
+      "feed": 220,
+      "obs": [],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0011",
+      "type": "W1410",
+      "at": "2026-10-19 08:52",
+      "operator": "op1",
+      "container": "C-0102",
+      "population": "P-26-031",
+      "mass": 1390,
+      "water": 120,
+      "feed": 200,
+      "obs": [],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0012",
+      "type": "W1410",
+      "at": "2026-10-19 09:05",
+      "operator": "op1",
+      "container": "C-0103",
+      "population": "P-26-031",
+      "mass": 1430,
+      "water": 110,
+      "feed": 210,
+      "obs": [
+        "Too dry"
+      ],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0013",
+      "type": "W1410",
+      "at": "2026-10-19 09:20",
+      "operator": "op2",
+      "container": "C-0104",
+      "population": "P-26-034",
+      "mass": 980,
+      "water": 80,
+      "feed": 140,
+      "obs": [],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0014",
+      "type": "W1410",
+      "at": "2026-10-19 09:35",
+      "operator": "op2",
+      "container": "C-0105",
+      "population": "P-26-029",
+      "mass": 2210,
+      "water": 150,
+      "feed": 300,
+      "obs": [],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0015",
+      "type": "W1410",
+      "at": "2026-10-19 09:47",
+      "operator": "op2",
+      "container": "C-0106",
+      "population": "P-26-029",
+      "mass": 2050,
+      "water": 150,
+      "feed": 280,
+      "obs": [],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0016",
+      "type": "W1410",
+      "at": "2026-10-19 10:05",
+      "operator": "op3",
+      "container": "C-0109",
+      "population": "P-26-040",
+      "mass": 2620,
+      "water": 160,
+      "feed": 330,
+      "obs": [],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0017",
+      "type": "W1410",
+      "at": "2026-10-19 10:20",
+      "operator": "op3",
+      "container": "C-0201",
+      "population": "P-26-044",
+      "mass": 1850,
+      "water": 220,
+      "feed": 450,
+      "obs": [
+        "Too wet"
+      ],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0018",
+      "type": "W1410",
+      "at": "2026-10-22 08:45",
+      "operator": "op1",
+      "container": "C-0101",
+      "population": "P-26-031",
+      "mass": 1560,
+      "water": 120,
+      "feed": 230,
+      "obs": [],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0019",
+      "type": "W1410",
+      "at": "2026-10-22 09:10",
+      "operator": "op3",
+      "container": "C-0202",
+      "population": "P-26-044",
+      "mass": 1700,
+      "water": 200,
+      "feed": 420,
+      "obs": [],
+      "status": "Recorded"
+    },
+    {
+      "id": "T-0020",
+      "type": "W1410",
+      "at": "2026-10-26 08:40",
+      "operator": "op1",
+      "container": "C-0104",
+      "population": "P-26-034",
+      "mass": 1050,
+      "water": 80,
+      "feed": 150,
+      "obs": [],
+      "status": "Recorded"
+    }
+  ]
+}
